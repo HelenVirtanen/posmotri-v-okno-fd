@@ -44,6 +44,16 @@ ol {
   color: #545050;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .content {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -85,6 +95,43 @@ ol {
   margin-bottom: 5px;
 }
 
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__label {
+  display: flex;
+  width: fit-content;
+}
+
+.search-form__textfield {
+  width: 225px;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;;
+  color: hsla(0, 0%, 100%, 0.7);
+  background-color: transparent;
+  font-family: inherit; 
+  font-size: inherit;
+  line-height: 1;
+  appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 /* Заголовок и список локаций */
 
 .content__details {
@@ -118,12 +165,11 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: flex-start;
-  padding-left: 2px;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
-  height: 103px;
+  max-height: 103px;
   object-fit: cover;
   object-position: center;
 }
@@ -131,6 +177,7 @@ ol {
 .content__video-card-description-container {
   flex-grow: 1;
   max-width: 196px;
+  padding-left: 2px;
 }
 
 .content__video-card-title {
