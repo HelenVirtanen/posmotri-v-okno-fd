@@ -107,6 +107,8 @@ ol {
 .search-form__label {
   display: flex;
   width: fit-content;
+  align-items: center;
+  gap: 5px;
 }
 
 .search-form__textfield {
@@ -123,7 +125,25 @@ ol {
   appearance: none;
 }
 
-.search-form__textfield:focus {
+.search-form__pseudo-checkbox {
+  display: block;
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+}
+
+.search-form__pseudo-checkbox::after {
+  display: none;
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin: 1px;
+}
+
+/* Состояния элементов формы */
+.search-form__textfield:focus,
+.search-form__checkbox:focus {
   outline: none;
 }
 
@@ -132,7 +152,30 @@ ol {
   outline-offset: 1px;
 }
 
-/* Заголовок и список локаций */
+.search-form__textfield:active {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  display: block;
+}
+
+.search-form__checkbox:disabled + .search-form__pseudo-checkbox {
+  border: 1px solid hsla(0, 0%, 100%, 0.5);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.search-form__checkbox:disabled + .search-form__pseudo-checkbox + .search-form__label-text {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+/* Главный заголовок проекта и список локаций */
 
 .content__details {
   grid-area: details;
