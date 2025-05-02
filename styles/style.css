@@ -109,6 +109,7 @@ ol {
   width: fit-content;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
 }
 
 .search-form__textfield {
@@ -162,7 +163,7 @@ ol {
 }
 
 .search-form__checkbox:disabled + .search-form__pseudo-checkbox {
-  border: 1px solid hsla(0, 0%, 100%, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   opacity: 0.4;
   pointer-events: none;
 }
@@ -170,7 +171,7 @@ ol {
 .search-form__checkbox:disabled
   + .search-form__pseudo-checkbox
   + .search-form__label-text {
-  color: hsla(0, 0%, 100%, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -184,7 +185,6 @@ ol {
   width: 399px;
   align-items: stretch;
 }
-
 
 /* Заголовок проекта */
 .title {
@@ -269,7 +269,6 @@ ol {
 
 .content__card-link_current {
   background-color: #545050;
-
 }
 
 /*Состояния карточки с локацией */
@@ -299,6 +298,7 @@ ol {
   line-height: 1;
   padding-top: 6px;
   padding-bottom: 6px;
+  cursor: pointer;
 }
 
 .search-form__submit-button {
@@ -325,8 +325,15 @@ ol {
 .button:hover {
   text-decoration: underline;
 }
+
 .button:active {
   background-color: #545050;
+}
+
+.button:disabled {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #545050;
 }
 
 /* Кастомный скроллбар */
