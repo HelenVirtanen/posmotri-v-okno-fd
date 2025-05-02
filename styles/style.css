@@ -116,10 +116,10 @@ ol {
   border-left: none;
   border-right: none;
   border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;;
+  border-bottom: 1px solid #fff;
   color: hsla(0, 0%, 100%, 0.7);
   background-color: transparent;
-  font-family: inherit; 
+  font-family: inherit;
   font-size: inherit;
   line-height: 1;
   appearance: none;
@@ -134,7 +134,7 @@ ol {
 
 .search-form__pseudo-checkbox::after {
   display: none;
-  content: '';
+  content: "";
   width: 15px;
   height: 15px;
   background-color: #fff;
@@ -154,7 +154,7 @@ ol {
 
 .search-form__textfield:active {
   border-left: 1px solid #fff;
-  border-right: 1px solid #fff;;
+  border-right: 1px solid #fff;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -167,7 +167,9 @@ ol {
   pointer-events: none;
 }
 
-.search-form__checkbox:disabled + .search-form__pseudo-checkbox + .search-form__label-text {
+.search-form__checkbox:disabled
+  + .search-form__pseudo-checkbox
+  + .search-form__label-text {
   color: hsla(0, 0%, 100%, 0.5);
 }
 
@@ -203,6 +205,7 @@ ol {
   flex-direction: column;
   row-gap: 30px;
   max-width: 390px;
+  margin-bottom: 30px;
 }
 
 .content__video-card {
@@ -252,6 +255,47 @@ ol {
 .content__card-link {
   text-decoration: none;
   color: #fff;
+}
+
+/* Кнопки */
+.button {
+  font-family: inherit;
+  font-size: inherit;
+  color: currentColor;
+  background-color: transparent;
+  border: 1px solid currentColor;
+  font-weight: 700;
+  line-height: 1;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.search-form__submit-button {
+  padding-left: 73.5px;
+  padding-right: 73.5px;
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
+}
+
+/* Состояния кнопок */
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+.button:active {
+  background-color: rgba(84, 80, 80, 1);
 }
 
 /* Кастомный скроллбар */
