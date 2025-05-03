@@ -139,7 +139,7 @@ ol {
   content: "";
   width: 15px;
   height: 15px;
-  background-color: #fff;
+  background-color: currentColor;
   margin: 1px;
 }
 
@@ -266,7 +266,7 @@ ol {
 .content__card-link {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: currentColor;
 }
 
 .content__card-link_current {
